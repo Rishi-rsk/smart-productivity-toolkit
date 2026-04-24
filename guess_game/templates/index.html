@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🎯 Guess the Number (1-100)</h1>
+
+<p>{{ message }}</p>
+<p>Range: {{ game.low }} - {{ game.high }}</p>
+
+<form method="POST">
+    <input type="number" name="guess" required>
+    <button type="submit">Guess</button>
+</form>
+
+<h3>History:</h3>
+<ul>
+    {% for g, status in game.history %}
+        <li>{{ g }} → {{ status }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/reset">Restart Game</a>
+
+</body>
+</html>
