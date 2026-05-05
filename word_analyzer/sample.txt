@@ -1,0 +1,3 @@
+Python is powerful and easy.
+Python is widely used in AI and ML.
+Developers love Python for its simplicity.
